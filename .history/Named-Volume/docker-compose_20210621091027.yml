@@ -3,7 +3,7 @@ services:
    db:
      image: mysql:5.7
      volumes:
-       - mysql_vol:/var/lib/mysql
+       - db_vol:/var/lib/mysql
      environment:
        MYSQL_ROOT_PASSWORD: root
        MYSQL_DATABASE: testdb1
@@ -21,4 +21,4 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
 volumes:
-     mysql_vol:
+     db_vol:
